@@ -1,0 +1,28 @@
+var
+
+codigo:caractere
+precokw,quantidade,total:real
+
+inicio
+
+  Escreva("Digite o seu Código de Consumidor: ")
+  leia(codigo)
+  escreva("Digite o preço pago por kW: ")
+  leia(precokw)
+  escreva("Digite a quantidade consumida de kW: ")
+  leia(quantidade)
+
+  total:= (precokw*quantidade)
+  se total<11.50 entao
+    total:=11.50
+  fimse
+
+  escreval()
+  escreval()
+  escreval("====================================================")
+  escreval("       Código do Consumidor - ",codigo)
+  escreval("Mínimo a pagar = R$ 11.50   Total a pagar = R$",total)
+  escreval("====================================================")
+  
+
+fimalgoritmo
