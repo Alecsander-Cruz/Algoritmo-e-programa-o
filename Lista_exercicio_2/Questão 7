@@ -1,0 +1,41 @@
+var
+
+nota1,nota2,nota3,media,notafinal,mediafinal:real
+
+inicio
+
+  escreva("Insira a primeira nota: ")
+  leia(nota1)
+  escreval()
+  escreva("Insira a segunda nota: ")
+  leia(nota2)
+  escreval()
+  escreva("Insira a terceira nota: ")
+  leia(nota3)
+  escreval()
+  
+  media:=(nota1+nota2+nota3)/3
+  
+  se(media>=7) entao
+    escreval("Sua média é",media,". Você está aprovado, parabéns!")
+  senao
+  
+    se (media>=4) e (media<7) entao
+      escreva("Insira a nota da prova final: ")
+      leia(notafinal)
+      mediafinal:=(media+notafinal)/2
+      escreval()
+      se (mediafinal>=5) entao
+        escreval("Sua média final é",mediafinal,". Você está aprovado, parabéns. Na próxima vez estude mais!")
+      senao
+        escreval("Sua média final é",mediafinal,". Você está reprovado, PEGOU EM BOMBA!")
+      fimse
+      
+    senao
+      escreval("Sua média final é",media,". Você está reprovado, PEGOU EM BOMBA!")
+    fimse
+    
+  fimse
+
+
+fimalgoritmo
