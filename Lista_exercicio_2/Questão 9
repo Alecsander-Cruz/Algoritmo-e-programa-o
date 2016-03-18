@@ -1,0 +1,26 @@
+var
+
+X,Y,Z:REAL
+
+inicio
+
+X := 10
+Y := 20
+Z := 30
+
+  se X < Y entao
+    escreva("A")
+  senao
+    escreva("B");
+    se Y > Z entao
+      escreva("C")
+    senao
+      escreva("D")
+      se (Z > Y) e (Z > X) entao
+        escreva("E")
+      fimse
+    fimse
+  fimse
+  escreva("F")
+
+fimalgoritmo
