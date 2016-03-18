@@ -1,0 +1,21 @@
+var
+
+A,B,C:REAL
+
+inicio
+
+A<-1
+B<-2
+C<-3
+
+  se (A > B) e (A > C) entao
+    escreva("A maior que B e C")
+  senao
+    se B > C entao
+      escreva("B maior que A e C")
+    senao
+      escreva("C maior que A e B")
+    fimse
+  fimse
+
+fimalgoritmo
