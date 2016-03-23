@@ -1,0 +1,37 @@
+var
+  n1,n2,n3:real
+
+procedimento exibir_media(nota1,nota2,nota3:real)
+inicio
+
+  se nota1>nota2 entao
+    escreval("Média: ",(nota1+nota3)/2)
+  senao
+    escreval("Média:",(nota2+nota3)/2)
+  fimse
+
+fimprocedimento
+
+funcao ler_real(texto:caractere):real
+
+var
+
+  nota_lida:real
+
+inicio
+
+  escreva(texto)
+  leia(nota_lida)
+  retorne nota_lida
+
+fimfuncao
+
+inicio
+
+  n1<-ler_real("Digite a primeira nota: ")
+  n2<-ler_real("Coloque a segunda nota: ")
+  n3<-ler_real("Agora insira a terceira nota: ")
+  
+  exibir_media(n1,n2,n3)
+
+fimalgoritmo
