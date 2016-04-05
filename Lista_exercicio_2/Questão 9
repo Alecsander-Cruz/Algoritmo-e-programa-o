@@ -1,3 +1,8 @@
+algoritmo "Questão 9 AF"
+// Função : Determinar o que será impresso
+// Autor :  Alecsander Cruz
+// Data : 18/03/2016
+// Seção de Declarações 
 var
 
 X,Y,Z:REAL
