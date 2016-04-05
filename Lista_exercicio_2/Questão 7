@@ -1,3 +1,8 @@
+algoritmo "Questão 7"
+// Função : Condição acadêmica do aluno
+// Autor :  Alecsander Cruz
+// Data : 18/03/2016
+// Seção de Declarações 
 var
 
 nota1,nota2,nota3,media,notafinal,mediafinal:real
