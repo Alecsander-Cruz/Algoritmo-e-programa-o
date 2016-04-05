@@ -1,3 +1,8 @@
+algoritmo "Questão 6"
+// Função : Calcular o valor da conta de luz
+// Autor :  Alecsander Cruz
+// Data : 18/03/2016
+// Seção de Declarações 
 var
 
 codigo:caractere
