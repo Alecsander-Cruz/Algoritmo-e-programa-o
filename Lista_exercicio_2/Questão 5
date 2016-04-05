@@ -2,7 +2,7 @@ algoritmo "Questão 5"
 // Função : Organizar os nomes por ordem alfabética
 // Autor :  Alecsander Cruz
 // Data : 05/04/2016
-// Seção de Declarações 
+// Seção de Declarações
 var
 
 NOME1, NOME2, NOME3:CARACTERE
@@ -20,41 +20,39 @@ inicio
   escreva("Digite o terceiro nome: ")
   leia(nome3)
   escreval()
-  
-  se (nome1<nome2) e (nome1<nome3) entao
-    se (nome2<nome3) entao
-      escreval("Na ordem alfabética os nomes são:")
+  escreval("========================================================")
+  escreval("=========== Em ordem alfabética os nomes são ===========")
+  escreval("========================================================")
+  escreval()
+
+  se (nome1<=nome2) e (nome1<=nome3) entao
+    se (nome2<=nome3) entao
       escreval(nome1)
       escreval(nome2)
       escreval(nome3)
     senao
-      escreval("Na ordem alfabética os nomes são:")
       escreval(nome1)
       escreval(nome3)
       escreval(nome2)
     fimse
   senao
-    se (nome2<nome1) e (nome2<nome3) entao
-      se (nome1<nome3) entao
-        escreval("Na ordem alfabética os nomes são:")
+    se (nome2<=nome1) e (nome2<=nome3) entao
+      se (nome1<=nome3) entao
         escreval(nome2)
         escreval(nome1)
         escreval(nome3)
       senao
-        escreval("Na ordem alfabética os nomes são:")
         escreval(nome2)
         escreval(nome3)
         escreval(nome1)
       fimse
     senao
-      se (nome3<nome1) e (nome3<nome2) entao
-        se (nome1<nome2) entao
-          escreval("Na ordem alfabética os nomes são:")
+      se (nome3<=nome1) e (nome3<=nome2) entao
+        se (nome1<=nome2) entao
           escreval(nome3)
           escreval(nome1)
           escreval(nome2)
         senao
-          escreval("Na ordem alfabética os nomes são:")
           escreval(nome3)
           escreval(nome2)
           escreval(nome1)
