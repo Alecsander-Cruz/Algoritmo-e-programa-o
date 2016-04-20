@@ -1,0 +1,8 @@
+
+import random
+dir(random)   subrotinas do random
+random.randint  comando para usar o comando randint
+
+lista = [10,20,30]
+
+lista = [1]
