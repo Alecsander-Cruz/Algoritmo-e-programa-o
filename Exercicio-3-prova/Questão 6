@@ -1,0 +1,16 @@
+total = 0
+
+while True:
+    numero = input("Digite um número (SAIR para sair): ")
+    if numero == "SAIR":
+        break
+
+    try:
+        total = total + float(numero)
+    except:
+        pass
+
+    print("Total = ", total)
+    
+    
+    
