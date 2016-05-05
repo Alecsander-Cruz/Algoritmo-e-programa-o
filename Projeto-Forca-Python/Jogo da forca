@@ -35,7 +35,7 @@ while (not sair):
         if (opcao == '1') or (opcao == '2') or (opcao == '3'):
             break
 
-            print('ESCULPE, A OPÇÃO DIGITADA É INVÁLIDA.')
+            print('DESCULPE, A OPÇÃO DIGITADA É INVÁLIDA.')
 
     if opcao == '3':
         sair = True
