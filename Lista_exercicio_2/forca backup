@@ -1,0 +1,133 @@
+'''JOGO DA FORCA EM PYTHON
+MATÉRIA: ALGORITMO E PROGRAMAÇÃO
+prof.: CARLOS EDUARDO
+GRUPO: GABRIEL DA SILVA COSTA VASCONCELOS DE ARAÚJO/ 1610013277
+ALECSANDER CRUZ 
+CAIO SOUZA
+
+'''
+import sys
+import string # para manipular as palavras retiradas da lista
+import random # para escolher a palavra
+
+lista_facil = ['melhor', 'grande', 'claro', 'azul', 'vermelho', 'preto', 'branco', 'casa', 'tempo', 'felicidade', 'bondade', 'vida',
+'caneta', 'cavalo', 'trem', 'golpe', 'cosmos']
+
+lista_dificil = ['procrastinar', 'prolegômenos', 'vicissitudes', 'pernóstico', 'opróbrio', 'idiossincrasia', 'elucubrações',
+'chistoso', 'acrimônia', 'combustível', 'concurso', 'protesto', 'governo', 'paquiderme', 'tamandaré']
+F_= True
+D_= False
+dificuldade = True
+
+sair = False
+
+while (not sair):
+    print ("---------------------------")
+    print ("       JOGO DA FORCA       ")
+    print ("---------------------------")
+    print ("1- INICIAR PARTIDA         ")
+    print ("2- CONFIGURAR DIFICULDADE  ")
+    print ("3- SAIR")
+    
+    while True:
+        opcao = input('OPÇÃO DESEJADA: ')
+
+        if (opcao == '1') or (opcao == '2') or (opcao == '3'):
+            break
+
+            print('DESCULPE, A OPÇÃO DIGITADA É INVÁLIDA.')
+
+    if opcao == '3':
+        sair = True
+#--------------MENU DE DIFICULDADE---------------------------------- #       
+    if opcao == '2':
+        voltar = False
+        while (not voltar):
+            
+           #--------------Asterisco-----------#
+            
+            if F_ == True:
+                FF = '*'
+            else:
+                FF = ''
+            if D_ == True:
+                DD = '*'
+            else:
+                DD = ' '
+#------------------------------------------------------------------#
+                
+            print ('---------------------------')
+            print ('       JOGO DA FORCA       ')
+            print ('---------------------------')
+            print ('F- FÁCIL',FF)
+            print ('D- DIFICIL', DD)
+            print ('')
+            print ('V- VOLTAR')
+            while True:
+                dific = input('OPÇÃO DESEJADA: ')
+                if (dific == 'F') or (dific == 'D') or (dific == 'V'):
+                    break
+
+                print ('DESCULPE, A OPÇÃO DIGITADA É INVÁLIDA.')
+
+            if dific == 'V':
+                voltar = True
+
+            if dific == 'F':
+                F_ = True
+                D_ = False
+                dificuldade = True #True é facil
+
+            if dific == 'D':
+                F_ = False
+                D_ = True
+                dificuldade = False #False é dificil
+            
+#-----------------------------Condições do jogo-----------------------------        
+    if opcao == '1':
+        if dificuldade == True:
+            lista = lista_facil
+            vidas = 5
+        elif dificuldade == False:
+            lista = lista_dificil
+            vidas = 3
+
+#--------------------------- Inicio do jogo---------------------------------
+        palavra = lista[random.randint(0,len(lista)-1)]
+        while vidas > 0:
+            print('Letras já utilizadas:')
+            linhas = ' _ ' * len(palavra)
+            print ('Palavra:', linhas)
+            print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
+            palpite = input ('>')
+                             
+            
+
+            if len(palpite)!= 1:
+                print ('Oi? Isso não é uma letra.')
+                vidas = 1
+            elif palpite not in 'abcdefghijklmnopqrstuvwxyz':
+                print ('Oi? Isso não é uma letra.')
+                vidas = 1
+
+
+
+            if vidas <= 0:		
+                print ("PERDEU!, a palavra era", palavra )
+                break
+        
+
+        if palpite == '0':
+            break
+        
+        
+        
+        
+        
+    		 		
+
+
+
+
+            if vidas <= 0:		
+                print ("PERDEU!, a palavra era"), palavra
