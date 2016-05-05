@@ -93,13 +93,21 @@ while (not sair):
             vidas = 3
     
 #--------------------------- Inicio do jogo---------------------------------
+        letras_corretas = []
         letras_usadas = []
         palavra = lista[random.randint(0,len(lista)-1)]
         while vidas > 0:
-            print('Letras já utilizadas:',letras_usadas ,)
-            palavra = lista[random.randint(0,len(lista)-1)]
+            print('Letras já utilizadas:',letras_usadas)
+           
             linhas = ' _ ' * len(palavra)
-            print ('Palavra:', linhas)
+            for i in range(len(palavra)):
+                if palavra[i] in letras_corretas:
+                    linhas = linhas[:i] + palavras[i] + linhas[i+1:]
+            print('Palavra:', end='')
+            for letra in linhas:
+                print(letra, end='')
+            print()
+           
             print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
             palpite = input ('>')
                          
