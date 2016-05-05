@@ -93,8 +93,8 @@ while (not sair):
             vidas = 3
 
 #--------------------------- Inicio do jogo---------------------------------
-        while vidas > 0:
-            print('Letras já utilizadas:')
+          while vidas > 0:
+            print('Letras já utilizadas:',letras_usadas ,)
             palavra = lista[random.randint(0,len(lista)-1)]
             linhas = ' _ ' * len(palavra)
             print ('Palavra:', linhas)
@@ -104,11 +104,15 @@ while (not sair):
             
 
             if len(palpite)!= 1:
+                print ('Oi? Isso não é só uma letra.')
+                vidas = 1
+            elif palpite not in 'abcdefghijklmnopqrstuwxyz':
                 print ('Oi? Isso não é uma letra.')
                 vidas = 1
-            elif palpite not in 'abcdefghijklmnopqrstuvwxyz':
-                print ('Oi? Isso não é uma letra.')
-                vidas = 1
+            elif palpite in letras_usadas:
+                print ('letra ',palpite ,'já utilizada. Tente Outra')
+            else:
+                letras_usadas.append(palpite)
 
 
 
