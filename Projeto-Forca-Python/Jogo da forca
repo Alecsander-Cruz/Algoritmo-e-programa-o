@@ -93,6 +93,7 @@ while (not sair):
             vidas = 3
 
 #--------------------------- Inicio do jogo---------------------------------
+palavra = lista[random.randint(0,len(lista)-1)]
           while vidas > 0:
             print('Letras já utilizadas:',letras_usadas ,)
             palavra = lista[random.randint(0,len(lista)-1)]
