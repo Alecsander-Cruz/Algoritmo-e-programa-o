@@ -115,7 +115,9 @@ while (not sair):
 
             print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
             palpite = input ('>')
-                
+              
+            if palpite == '0':
+                break
 
             if len(palpite)!= 1:
                 print ('Oi? Isso não é só uma letra.')
@@ -127,11 +129,9 @@ while (not sair):
                 print ('letra ',palpite ,'já utilizada. Tente Outra')
             else:
                 letras_usadas.append(palpite)
+                if palpite in palavra:
+                    letras_corretas.append(palpite)
 
             if vidas <= 0:      
                 print ("PERDEU!, a palavra era", palavra )
-                break
-    
-
-            if palpite == '0':
                 break
