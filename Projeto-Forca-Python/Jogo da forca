@@ -93,32 +93,32 @@ while (not sair):
             vidas = 3
     
 #--------------------------- Inicio do jogo---------------------------------
+        palavra = lista[random.randint(0,len(lista)-1)]
+        while vidas > 0:
+            print('Letras já utilizadas:',letras_usadas ,)
             palavra = lista[random.randint(0,len(lista)-1)]
-            while vidas > 0:
-                print('Letras já utilizadas:',letras_usadas ,)
-                palavra = lista[random.randint(0,len(lista)-1)]
-                linhas = ' _ ' * len(palavra)
-                print ('Palavra:', linhas)
-                print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
-                palpite = input ('>')
-                             
-            
-
-                if len(palpite)!= 1:
-                    print ('Oi? Isso não é só uma letra.')
-                    vidas = 1
-                elif palpite not in 'abcdefghijklmnopqrstuwxyz':
-                    print ('Oi? Isso não é uma letra.')
-                    vidas = 1
-                elif palpite in letras_usadas:
-                    print ('letra ',palpite ,'já utilizada. Tente Outra')
-                else:
-                    letras_usadas.append(palpite)
-
-                if vidas <= 0:      
-                    print ("PERDEU!, a palavra era", palavra )
-                    break
+            linhas = ' _ ' * len(palavra)
+            print ('Palavra:', linhas)
+            print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
+            palpite = input ('>')
+                         
         
 
-                if palpite == '0':
-                    break
+            if len(palpite)!= 1:
+                print ('Oi? Isso não é só uma letra.')
+                vidas = 1
+            elif palpite not in 'abcdefghijklmnopqrstuwxyz':
+                print ('Oi? Isso não é uma letra.')
+                vidas = 1
+            elif palpite in letras_usadas:
+                print ('letra ',palpite ,'já utilizada. Tente Outra')
+            else:
+                letras_usadas.append(palpite)
+
+            if vidas <= 0:      
+                print ("PERDEU!, a palavra era", palavra )
+                break
+    
+
+            if palpite == '0':
+                break
