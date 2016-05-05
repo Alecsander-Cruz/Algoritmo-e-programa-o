@@ -96,22 +96,26 @@ while (not sair):
         letras_corretas = []
         letras_usadas = []
         palavra = lista[random.randint(0,len(lista)-1)]
+        linhas = ' _ ' * len(palavra)
         while vidas > 0:
-            print('Letras já utilizadas:',letras_usadas)
-           
-            linhas = ' _ ' * len(palavra)
-            for i in range(len(palavra)):
+
+            print('Letras já utilizadas:', end='') #organização das letras utilizadas
+            for l in range(0, len(letras_usadas)):
+                print(letras_usadas[l], end=' ')
+            print()
+ 
+            
+            for i in range(len(palavra)): #print dos underline
                 if palavra[i] in letras_corretas:
                     linhas = linhas[:i] + palavras[i] + linhas[i+1:]
             print('Palavra:', end='')
             for letra in linhas:
                 print(letra, end='')
             print()
-           
+
             print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
             palpite = input ('>')
-                         
-        
+                
 
             if len(palpite)!= 1:
                 print ('Oi? Isso não é só uma letra.')
