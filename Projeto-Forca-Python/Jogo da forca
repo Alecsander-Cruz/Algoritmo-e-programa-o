@@ -132,7 +132,7 @@ while (not sair):
                 if palpite in palavra: # verificação das letras na palavra
                     letras_corretas.append(palpite)
                     
-                      palavra_completa = True #Verificar se o jogador ganhou
+                     palavra_completa = True #Verificar se o jogador ganhou
                     for (i) in range (len(palavra)):
                         if palavra[i] not in letras_corretas:
                             palavra_completa = False
@@ -143,7 +143,7 @@ while (not sair):
                             break
                             
             if jogo_completo:
-            break
+                break
 
             if vidas <= 0:      
                 print ("PERDEU!, a palavra era", palavra )
