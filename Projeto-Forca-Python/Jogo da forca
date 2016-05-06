@@ -170,11 +170,15 @@ while (not sair):
                 print ("Pressione enter para continuar...", end='\n\n')
                 jogo_completo = True
                 
-            if jogo_completo:
-                jogo_completo = False
-                letras_erradas = []
-                letras_corretas = []
-                letras_usadas = []
-                palavra = lista[random.randint(0,len(lista)-1)]
-                linhas = '_' * len(palavra)
-                break
+             if jogo_completo:
+                jogar_denovo = input ('>')
+                if jogar_denovo == (''):
+                    jogo_completo = False
+                    joao = vidas
+                    letras_erradas = []
+                    letras_corretas = []
+                    letras_usadas = []
+                    palavra = lista[random.randint(0,len(lista)-1)]
+                    linhas = '_' * len(palavra)
+                else:
+                    break
