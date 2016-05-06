@@ -93,6 +93,7 @@ while (not sair):
             vidas = 3
     
 #--------------------------- Inicio do jogo---------------------------------
+        jogo_completo = False
         letras_corretas = []
         letras_usadas = []
         palavra = lista[random.randint(0,len(lista)-1)]
