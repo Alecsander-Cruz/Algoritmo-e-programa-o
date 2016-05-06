@@ -129,7 +129,7 @@ while (not sair):
                 print ('letra ',palpite ,'já utilizada. Tente Outra')
             else:
                 letras_usadas.append(palpite)
-                if palpite in palavra:
+                if palpite in palavra: # verificação das letras na palavra
                     letras_corretas.append(palpite)
 
             if vidas <= 0:      
