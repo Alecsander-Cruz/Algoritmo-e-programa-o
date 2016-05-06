@@ -107,7 +107,7 @@ while (not sair):
             
             for i in range(len(palavra)): #print dos underline
                 if palavra[i] in letras_corretas:
-                    linhas = linhas[:i] + palavras[i] + linhas[i+1:]
+                    linhas = linhas[:i] + palavra[i] + linhas[i+1:]
             print('Palavra:', end='')
             for letra in linhas:
                 print(letra, end='')
