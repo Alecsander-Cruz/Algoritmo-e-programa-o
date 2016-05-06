@@ -118,6 +118,12 @@ while (not sair):
 
             print ('Entre uma letra (0 para sair).', (joao-len(letras_erradas)), 'tentativas restantes.')
             palpite = input ('> ')
+            
+            while palpite in letras_usadas:
+                print ('Entre uma letra (0 para sair).', (joao-len(letras_erradas)), 'tentativas restantes.')
+                palpite = input ('>')
+              
+            
               
             if palpite == '0':
                 break
