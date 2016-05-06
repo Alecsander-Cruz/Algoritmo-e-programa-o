@@ -133,6 +133,7 @@ while (not sair):
             else:
                 letras_usadas.append(palpite)
                 if palpite in palavra: # verificação das letras na palavra
+                    print("Boa! A letra '", palpite, "' existe na palavra :)", sep='')
                     letras_corretas.append(palpite)
                     
                     palavra_completa = True #Verificar se o jogador ganhou
@@ -146,7 +147,7 @@ while (not sair):
                         break
                             
             if palpite not in letras_corretas: #Estado de Derrota
-                print('Letra',palpite,'não existe na palavra :(')
+                print("Letra '", palpite,"' não existe na palavra :(", sep='')
                 letras_erradas.append(palpite)
                         
             if vidas == len(letras_erradas):
