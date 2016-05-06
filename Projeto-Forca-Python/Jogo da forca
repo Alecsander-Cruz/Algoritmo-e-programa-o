@@ -94,7 +94,7 @@ while (not sair):
     
 #--------------------------- Inicio do jogo---------------------------------
         jogo_completo = False
-        letras_usadas = []
+        letras_erradas = []
         letras_corretas = []
         letras_usadas = []
         palavra = lista[random.randint(0,len(lista)-1)]
