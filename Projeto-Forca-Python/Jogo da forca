@@ -100,7 +100,7 @@ while (not sair):
         letras_usadas = []
         palavra = lista[random.randint(0,len(lista)-1)]
         linhas = '_' * len(palavra)
-        while vidas > 0:
+        while jogo_completo == false:
 
             print('Letras já utilizadas:', end=' ') # print das letras utilizadas
             for i in range(0, len(letras_usadas)):
@@ -150,7 +150,8 @@ while (not sair):
                             palavra_completa = False
                             break
                     if palavra_completa:
-                        print('Parabéns! Você ganhou. A Palavra era', palavra, 'Pressione enter para continuar')
+                        print("Parabéns! Você ganhou. A Palavra era '", palavra, "'.", sep='')
+                        print ("Pressione enter para continuar...", end='\n\n')
                         jogo_completo = True
                             
             if palpite not in letras_corretas: #Letras erradas para a contagem da derrota já q vidas por algum motivo é imutável para mim
@@ -160,7 +161,8 @@ while (not sair):
                         letras_erradas.append(palpite)
                         
             if len(letras_erradas) == joao :
-                print ("Jogo encerrado. Você perdeu. A palavra era'", palavra,"'. Pressione enter para continuar", sep='')
+                print ("Jogo encerrado. Você perdeu. A palavra era '", palavra,"'.", sep='')
+                print ("Pressione enter para continuar...", end='\n\n')
                 jogo_completo = True
                 
             if jogo_completo:
@@ -170,8 +172,4 @@ while (not sair):
                 letras_usadas = []
                 palavra = lista[random.randint(0,len(lista)-1)]
                 linhas = '_' * len(palavra)
-                break
-
-            if vidas <= 0:      
-                print ("PERDEU!, a palavra era", palavra )
                 break
