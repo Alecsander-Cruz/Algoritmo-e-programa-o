@@ -149,7 +149,13 @@ while (not sair):
                 print ('Jogo encerrado. Você perdeu. A palavra era ', palavra,'. Pressione enter para continuar')
                 jogo_completo = True
                 
-            if jogo_completo:
+            if jogo_completo: #resetando as variáveis para um novo jogo
+                jogo_completo = False
+                letras_erradas = []
+                letras_corretas = []
+                letras_usadas = []
+                palavra = lista[random.randint(0,len(lista)-1)]
+                linhas = '_' * len(palavra)
                 break
 
             if vidas <= 0:      
