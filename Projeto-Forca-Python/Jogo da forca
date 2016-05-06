@@ -170,7 +170,7 @@ while (not sair):
                 print ("Pressione enter para continuar...", end='\n\n')
                 jogo_completo = True
                 
-             if jogo_completo:
+            if jogo_completo:
                 jogar_denovo = input ('')
                 print()
                 if jogar_denovo == (''):
