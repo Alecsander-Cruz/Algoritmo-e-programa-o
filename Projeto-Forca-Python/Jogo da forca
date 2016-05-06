@@ -100,7 +100,7 @@ while (not sair):
         letras_usadas = []
         palavra = lista[random.randint(0,len(lista)-1)]
         linhas = '_' * len(palavra)
-        while jogo_completo == false:
+        while jogo_completo == False:
 
             print('Letras já utilizadas:', end=' ') # print das letras utilizadas
             for i in range(0, len(letras_usadas)):
