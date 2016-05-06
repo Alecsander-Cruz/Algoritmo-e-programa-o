@@ -114,14 +114,16 @@ while (not sair):
             print('Palavra:', end=' ')
             for letra in linhas:
                 print(letra, end=' ')
-            print()
+            print(end='\n\n')
 
             print ('Entre uma letra (0 para sair).', (joao-len(letras_erradas)), 'tentativas restantes.')
             palpite = input ('> ')
+            print()
             
             while palpite in letras_usadas:
                 print ('Entre uma letra (0 para sair).', (joao-len(letras_erradas)), 'tentativas restantes.')
                 palpite = input ('>')
+                print()
               
             
               
