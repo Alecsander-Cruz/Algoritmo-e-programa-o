@@ -142,7 +142,13 @@ while (not sair):
                             print('Parabéns! Você ganhou. A Palavra era ', palavra, 'Pressione enter para continuar')
                             jogo_completo = True
                             break
-                            
+            if palpite not in letras_corretas: #Letras erradas para a contagem da derrota já q vidas por algum motivo é imutável para mim
+                letras_erradas.append(palpite)
+                        
+            if vidas == len(letras_erradas):
+                print ('Jogo encerrado. Você perdeu. A palavra era ', palavra,'. Pressione enter para continuar')
+                jogo_completo = True
+                
             if jogo_completo:
                 break
 
