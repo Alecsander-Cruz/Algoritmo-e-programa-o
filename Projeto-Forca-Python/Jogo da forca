@@ -129,19 +129,19 @@ while (not sair):
                 break
 
             if len(palpite)!= 1:
-                print ('Oi? Isso não é só uma letra.')
+                print ('Oi? Isso não é só uma letra.', end='\n\n')
                 joao = 1
             elif palpite in letras_erradas:
-                print ('Letra',palpite,'já foi usada')
+                print ("Letra '",palpite ,"' já utilizada. Tente Outra.", sep='', end='\n\n')
             elif palpite not in 'abcdefghijklmnopqrstuvwxyzôóõíé':
-                print ('Oi? Isso não é uma letra.')
+                print ('Oi? Isso não é uma letra.', end='\n\n')
                 joao = 1
             elif palpite in letras_usadas:
-                print ("Letra '",palpite ,"' já utilizada. Tente Outra.", sep='')
+                print ("Letra '",palpite ,"' já utilizada. Tente Outra.", sep='', end='\n\n')
             else:
                 letras_usadas.append(palpite)
                 if palpite in palavra: # verificação das letras na palavra
-                    print("Boa! A letra '", palpite, "' existe na palavra :)", sep='')
+                    print("Boa! A letra '", palpite, "' existe na palavra :)", sep='', end='\n\n')
                     letras_corretas.append(palpite)
                     
                     palavra_completa = True # Verificar se o jogador ganhou
@@ -157,7 +157,7 @@ while (not sair):
             if palpite not in letras_corretas: #Letras erradas para a contagem da derrota já q vidas por algum motivo é imutável para mim
                 if palpite in 'abcdefghijklmnopqrstuvwxyzôóõíé': 
                     if palpite not in letras_erradas:
-                        print("Letra '", palpite,"' não existe na palavra :(", sep='')
+                        print("Letra '", palpite,"' não existe na palavra :(", sep='', end='\n\n')
                         letras_erradas.append(palpite)
                         
             if len(letras_erradas) == joao :
