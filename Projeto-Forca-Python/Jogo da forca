@@ -93,6 +93,7 @@ while (not sair):
             vidas = 3
     
 #--------------------------- Inicio do jogo---------------------------------
+        joao = vidas
         jogo_completo = False
         letras_erradas = []
         letras_corretas = []
@@ -115,7 +116,7 @@ while (not sair):
                 print(letra, end=' ')
             print()
 
-            print ('Entre uma letra (0 para sair).', vidas, 'tentativas restantes.')
+            print ('Entre uma letra (0 para sair).', (joao-len(letras_erradas)), 'tentativas restantes.')
             palpite = input ('>')
               
             if palpite == '0':
@@ -150,7 +151,7 @@ while (not sair):
                 print ('Jogo encerrado. Você perdeu. A palavra era ', palavra,'. Pressione enter para continuar')
                 jogo_completo = True
                 
-            if jogo_completo: #resetando as variáveis para um novo jogo
+            if jogo_completo:
                 jogo_completo = False
                 letras_erradas = []
                 letras_corretas = []
