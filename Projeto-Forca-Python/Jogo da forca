@@ -141,6 +141,9 @@ while (not sair):
                             print('Parabéns! Você ganhou. A Palavra era ', palavra, 'Pressione enter para continuar')
                             jogo_completo = True
                             break
+                            
+            if jogo_completo:
+            break
 
             if vidas <= 0:      
                 print ("PERDEU!, a palavra era", palavra )
