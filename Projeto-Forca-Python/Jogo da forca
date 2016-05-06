@@ -31,6 +31,7 @@ while (not sair):
     
     while True:
         opcao = input('OPÇÃO DESEJADA: ')
+        print()
 
         if (opcao == '1') or (opcao == '2') or (opcao == '3'):
             break
@@ -65,6 +66,7 @@ while (not sair):
             print ('V- VOLTAR')
             while True:
                 dific = input('OPÇÃO DESEJADA: ')
+                print()
                 if (dific == 'F') or (dific == 'D') or (dific == 'V'):
                     break
 
@@ -121,8 +123,9 @@ while (not sair):
             print()
             
             while palpite in letras_usadas:
+                print ("Letra '",palpite ,"' já utilizada. Tente Outra.", sep='', end='\n\n')
                 print ('Entre uma letra (0 para sair).', (joao-len(letras_erradas)), 'tentativas restantes.')
-                palpite = input ('>')
+                palpite = input ('> ')
                 print()
               
             
