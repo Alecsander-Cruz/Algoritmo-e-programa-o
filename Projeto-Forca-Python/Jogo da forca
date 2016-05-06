@@ -171,7 +171,8 @@ while (not sair):
                 jogo_completo = True
                 
              if jogo_completo:
-                jogar_denovo = input ('>')
+                jogar_denovo = input ('')
+                print()
                 if jogar_denovo == (''):
                     jogo_completo = False
                     joao = vidas
