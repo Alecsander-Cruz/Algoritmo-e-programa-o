@@ -146,6 +146,7 @@ while (not sair):
                         break
                             
             if palpite not in letras_corretas: #Estado de Derrota
+                print('Letra',palpite,'não existe na palavra :(')
                 letras_erradas.append(palpite)
                         
             if vidas == len(letras_erradas):
