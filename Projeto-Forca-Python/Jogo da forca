@@ -138,7 +138,7 @@ while (not sair):
                 joao = 1
             elif palpite in letras_erradas:
                 print ("Letra '",palpite ,"' já utilizada. Tente Outra.", sep='', end='\n\n')
-            elif palpite not in 'abcdefghijklmnopqrstuvwxyzôóõíé':
+            elif palpite not in 'abcdefghijklmnopqrstuvwxyzçôóõíé':
                 print ('Oi? Isso não é uma letra.', end='\n\n')
                 joao = 1
             elif palpite in letras_usadas:
